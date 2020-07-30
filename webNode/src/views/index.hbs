@@ -1,0 +1,159 @@
+ <header>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#app">Herrramienta</a>
+        <a href="#con">Contacto</a>
+      </nav>
+      <section class="textos-header">
+        <h1>Mi Ambiente</h1>
+        <h2>Una herramienta eficiente</h2>
+      </section>
+      <div class="wave" style="height: 150px; overflow: hidden;">
+        <svg
+          viewBox="0 0 500 150"
+          preserveAspectRatio="none"
+          style="height: 100%; width: 100%;"
+        >
+          <path
+            d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #fff;"
+          ></path>
+        </svg>
+      </div>
+    </header>
+    <main>
+      <section class="contenedor sobre-nosotros">
+        <h2 class="titulo" id="inicio">Nuestra herramienta</h2>
+        <div class="contenedor-sobre-nosotros">
+          <img src="img/ilustracion2.svg" alt="" class="imagen-about-us" />
+          <div class="contenido-textos">
+            <h3><span>1</span>Insuperable captura de datos</h3>
+            <p>
+              Mediante la disposición, el aprovechamiento y la utilización de
+              tecnologías de vanguardia como el software de desarrolo VsCode,
+              microcontroladores, módulos SBC y sensores obtenemos datos
+              verídicos de la calidad del aire y de la temperatura de la ciudad
+              previamente seleccionada por el usuario.
+            </p>
+            <h3><span>2</span>Datos ofrecidos en tiempo real</h3>
+            <p>
+              Gracias a tecnologías de almacenamiento de datos en tiempo real
+              como Firebase, nuestros dispositivos pueden obtener los datos
+              requeridos para almacenarlos en la base de datos y posteriormente
+              después de ser interpretados por la herramienta, logrén ser
+              presentados al usuario de una manera clara y comprensible.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="portafolio">
+          <div class="contenedor">
+          <h2 class="titulo" id="app">Herrramienta</h2>
+          <form action="/consultar" method="POST">
+           <label class="etiqueta">Ciudad</label>
+            <input type="text" name="ciudad" placeholder="Ciudad" class="comboBox" 
+            autofocus> 
+            <button class="botones" type="submit">Consultar</button>
+           
+            <div class="areaTexto"> 
+              {{#if ambiente}}
+            <ul class="text">
+                {{#each ambiente}}
+                 <li>
+                Calidad del aire:&nbsp;{{MQ-135}}&nbsp;CH4:&nbsp;{{MQ-2}}<br>
+                 Humedad:&nbsp;{{Humedad}}&nbsp;Sen Terminca:&nbsp;{{SensaciónTermica}}&nbsp;C°:&nbsp;{{Temperatura_C°}}<br>
+                 {{Ciudad}}&nbsp;{{Departamento}}&nbsp;{{Pais}}
+                 </li>
+                 {{/each}}
+            </ul>
+           {{else}}
+            Esta ciudad no cuenta con nuestros sensores por el momento{{Nada}}
+           {{/if}}
+            </div>  
+      </section> 
+      </form>
+      <section class="clientes contenedor">
+        <h2 class="titulo">Tecnologías</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="img/BD.jpg" alt="" />
+            <div class="contenido-texto-card">
+              <h4>Firebase</h4>
+              <p>
+                Firebase es la nueva y mejorada plataforma de desarrollo móvil
+                en la nube de Google. Se trata de una plataforma disponible para
+                diferentes plataformas (Android, iOS, web)
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Interpretar Datos.jpg" alt="" />
+            <div class="contenido-texto-card">
+              <h4>Datos</h4>
+              <p>
+                Es la entrada sin procesar de la cual se produce la información.
+                Información se refiere a los datos que han sido procesados y
+                comunicados de tal manera que pueden ser entendidos e
+                interpretados por el receptor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about-services">
+        <div class="contenedor">
+          <h2 class="titulo" id="acerca">Sobre nosotros</h2>
+          <div class="servicio-cont">
+            <div class="servicio-ind">
+              <img src="img/ilustracion4.svg" alt="" />
+              <h3>Equipo de desarrollo</h3>
+              <p>
+                Somos un grupo de estudiantes de ingeniería informática
+                desarrollando e integrando el conocimiento de los Sistemas
+                Distribuidos con los SBC para obtener como resultado final la
+                herramienta MiAmbiente.
+              </p>
+            </div>
+            <div class="servicio-ind">
+              <img src="img/svg2.svg" alt="" />
+              <h3>Ambiente</h3>
+              <p>
+                Es importante aportar a nuestro entorno para que la vida
+                prebalezca sobre todo lo demás. Para ello MiAmbiente mantiene
+                actualizada a las personas sobre los factores del medio ambiente
+                que influyen en cada de nosotros.
+              </p>
+            </div>
+            <div class="servicio-ind">
+              <img src="img/ilustracion3.svg" alt="" />
+              <h3>Futuro</h3>
+              <p>
+                Como proyección y un plus adicional a nuestra herramienta,
+                tenemos proyectado desarrollar e integrar la versión móvil para
+                brindar mayor facilidad de uso y portabilidad al momento de usar
+                MiAmbiente. ¡Conócela pronto!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contenedor-footer">
+        <div class="content-foo">
+          <h4 id="con">Contacto</h4>
+          <p>(+57) 305-380-1745</p>
+          <p>(+57) 310-866-4154</p>
+        </div>
+        <div class="content-foo">
+          <h4>Email</h4>
+          <p>MiAmbiente@gmail.com</p>
+        </div>
+        <div class="content-foo">
+          <h4>Ubicación</h4>
+          <p>Popayán, Cauca (Colombia)</p>
+        </div>
+      </div>
+      <h2 class="titulo-final">&copy; MiAmbiente</h2>
+    </footer>
