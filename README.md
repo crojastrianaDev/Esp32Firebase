@@ -1,0 +1,2 @@
+# Esp32Firebase
+Hoy en día los sistemas IoT se encuentran todo lugar y crecen de manera exponencial y son vitales para el desarrollo de la 4.0. Por esto en este proyecto queremos mostrar paso a paso, como podemos llevar datos en tiempo real a la nube haciendo uso del potente Esp32 y como en el mismo tiempo podemos consultar estos datos desde una web realizada para la consulta de los datos. Solo imagina si a futuro tenemos una app móvil que al igual nos permita consultar estos datos. Tu imaginación es el límite.
