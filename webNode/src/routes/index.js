@@ -8,7 +8,7 @@ const admin =require('firebase-admin');
 const { firestore } = require('firebase-admin');
 admin.initializeApp({
     credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://esp32firebase-34f7c.firebaseio.com/'
+    databaseURL: 'URL DE TU BASE DE DATOS'
 });//al configurar su conexión puede ingresar el comando npm run dev 
 
 //objeto de conexion
